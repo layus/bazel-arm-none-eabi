@@ -80,7 +80,8 @@ def _arm_gnu_toolchain(
         copts = [],
         linkopts = [],
         version = "",
-        include_std = False):
+        include_std = False,
+        hosts = hosts):
     for host, exec_compatible_with in hosts[toolchain_prefix].items():
         fix_linkopts = []
 
