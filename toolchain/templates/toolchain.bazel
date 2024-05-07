@@ -13,7 +13,8 @@ def %toolchain_name%_toolchain(
         copts = [],
         linkopts = [],
         target_compatible_with = [],
-        include_std = False
+        include_std = False,
+        hosts = HOSTS,
     ):
     """
     Create an toolchain with the given configuration.
@@ -22,7 +23,7 @@ def %toolchain_name%_toolchain(
         name: The name of the toolchain.
         version: The version of the gcc toolchain.
     """
-    for host_repo, exec_compatible_with in HOSTS.items():
+    for host_repo, exec_compatible_with in hosts.items():
 
         fix_copts = []
         fix_linkopts = []
